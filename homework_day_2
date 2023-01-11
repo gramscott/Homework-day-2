@@ -1,0 +1,109 @@
+
+# # EXERCISE A
+
+stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
+
+stops.append("Edinburgh Waverley")
+stops[0] = "Glasgow Queen St"
+stops.insert(3, "Polmont")
+print(stops[4])
+stops.remove("Livingston")
+stops.pop(1)
+print(len(stops))
+stops.sort()
+stops.sort(reverse = True)
+
+for stop in stops:
+    print (stop)
+
+
+#EXERCISE B
+
+users = {
+  "Jonathan": {
+    "twitter": "jonnyt",
+    "lottery_numbers": [6, 12, 49, 33, 45, 20],
+    "home_town": "Stirling",
+    "pets": [
+    {
+      "name": "fluffy",
+      "species": "cat"
+    },
+    {
+      "name": "fido",
+      "species": "dog"
+    },
+    {
+      "name": "spike",
+      "species": "dog"
+    }
+  ]
+  },
+  "Erik": {
+    "twitter": "eriksf",
+    "lottery_numbers": [18, 34, 8, 11, 24],
+    "home_town": "Linlithgow",
+    "pets": [
+    {
+      "name": "nemo",
+      "species": "fish"
+    },
+    {
+      "name": "kevin",
+      "species": "fish"
+    },
+    {
+      "name": "spike",
+      "species": "dog"
+    },
+    {
+      "name": "rupert",
+      "species": "parrot"
+    }
+  ]
+  },
+  "Avril": {
+    "twitter": "bridgpally",
+    "lottery_numbers": [12, 14, 33, 38, 9, 25],
+    "home_town": "Dunbar",
+    "pets": [
+      {
+        "name": "monty",
+        "species": "snake"
+      }
+    ]
+  }
+}
+
+jonathan_twitter_handle = users["Jonathan"]["twitter"]
+erik_home = users["Erik"]["home_town"]
+userErik = users["Erik"]
+print(userErik["lottery_numbers"])
+print(users["Avril"]["pets"][0]["species"])
+erik_lottery = users["Erik"]["lottery_numbers"]
+print (erik_lottery[2])
+erik_lottery = users["Erik"]["lottery_numbers"]
+print (erik_lottery[2])
+avril_even_lottery = users["Avril"]["lottery_numbers"]
+print(avril_even_lottery)
+for num in avril_even_lottery:
+    if num % 2 == 0:
+        print(num, end = " ")
+erik_lottery.append(str(7))
+users["linlithgow"] = "Edinburgh"
+erik_dog = {
+    "name" : "fluffy",
+    "species": "dog"
+    }
+users["Erik"][1] = erik_dog
+
+gram = []
+gram = {
+    "graeme": {
+        "twitter" : "none",
+        "lottery_numbers": [9, 3, 4, 30, 22],
+        "home_town": "Lanark",
+        }}
+
+users.update(gram)
+print(users)
